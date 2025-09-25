@@ -23,4 +23,3 @@ jobs:
             - Workflow que falhou: ${{ github.event.workflow_run.name }}
             - Status: ${{ github.event.workflow_run.conclusion }}
             - Link: ${{ github.event.workflow_run.html_url }}
-            - Equipe: <@&${{ secrets.DEV_TEAM_ROLE_ID }}>
