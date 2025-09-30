@@ -7,7 +7,7 @@ export const projects: Project[] = [
 		description: "uma rede social de memes, onde os usuarios pode postar, comentar, salvar e curtir varios memes.",
 		techs: ["Elysia", "TypeScript", "Postgres", "Docker", "Nginx", "TanStack Libs"],
 		platforms: ["mobile", "desktop", "web"],
-		images: ["/projects/comedyhub.webp"],
+		images: ["/projects/comedyhub.webp", "/projects/comedyhub1.webp", "/projects/comedyhub2.webp"],
 		links: [
 			{
 				name: "The ComedyHub",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
 		description: "Portfólio pessoal e painel de administração para gerenciar e exibir meus projetos dinamicamente.",
 		techs: ["Elysia", "TypeScript", "Postgres", "Docker"],
 		platforms: ["web"],
-		images: ["/projects/portifolio.webp"],
+		images: ["/projects/portfolio.webp"],
 		links: [
 			{
 				name: "Site",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
 			{
 				name: "GitHub",
 				type: "github",
-				href: "https://github.com/MarcosLima-1/portifolio",
+				href: "https://github.com/MarcosLima-1/portfolio",
 			},
 		],
 		categories: ["demo"],

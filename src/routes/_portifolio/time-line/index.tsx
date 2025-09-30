@@ -6,7 +6,6 @@ import { EventCard } from "@/modules/portifolio/pages/time-line/components/event
 import { timelineEvents } from "@/modules/portifolio/pages/time-line/constants/timeline";
 import type { EventType } from "@/types/timeline-event";
 
-// Mapeamento de propriedades do evento
 export type EventPropsMap = {
 	[key in EventType]: {
 		icon: LucideIcon;

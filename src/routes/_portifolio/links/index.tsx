@@ -33,7 +33,7 @@ const quickLinks = [
 
 function RouteComponent() {
 	return (
-		<main className="flex min-h-[500px] items-center justify-center bg-background p-4 sm:p-6 lg:p-8">
+		<main className="flex min-h-[500px] items-center justify-center p-4 sm:p-6 lg:p-8">
 			<div className="w-full max-w-2xl space-y-16">
 				<TitlePage title="Links Rápidos" />
 				<div className="flex flex-col gap-4 sm:gap-5">

@@ -79,7 +79,7 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
 					</div>
 
 					{hasMoreThanOneImage && (
-						<div className="absolute right-4 bottom-4 left-4 z-50">
+						<div className="absolute right-4 bottom-4 left-4 z-50 max-md:hidden">
 							<div className="custom-scrollbar flex justify-center gap-2 overflow-x-auto pb-2">
 								{project.images.map((image, index) => (
 									<button
