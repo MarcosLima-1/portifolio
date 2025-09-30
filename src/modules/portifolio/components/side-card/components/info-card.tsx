@@ -24,7 +24,7 @@ export function InfoCard({ className }: InfoCardProps) {
 				</div>
 				<div className="flex flex-col items-center">
 					<h1 className="font-bold text-2xl">Marcos</h1>
-					<p className="text-muted-foreground text-xs">Markin</p>
+					<p className="text-muted-foreground text-xs">vulgos: Markin, Marvos</p>
 				</div>
 				<h2 className="flex gap-1 rounded-md border bg-accent p-2">
 					{areas.map(({ name }) => {
