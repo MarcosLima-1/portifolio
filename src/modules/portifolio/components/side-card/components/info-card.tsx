@@ -20,16 +20,16 @@ export function InfoCard({ className }: InfoCardProps) {
 		>
 			<CardHeader className="relative w-full items-center gap-4">
 				<div className="size-32 overflow-hidden rounded-lg border bg-accent p-2">
-					<Image src="/tk.webp" alt="markin" height={100} width={100} className="size-full rounded-md object-cover" />
+					<Image src="/eu.webp" alt="markin" height={100} width={100} className="size-full rounded-md object-cover" />
 				</div>
 				<div className="flex flex-col items-center">
 					<h1 className="font-bold text-2xl">Marcos</h1>
 					<p className="text-muted-foreground text-xs">vulgos: Markin, Marvos</p>
 				</div>
-				<h2 className="flex gap-1 rounded-md border bg-accent p-2">
+				<h2 className="flex flex-wrap items-center gap-1 p-2">
 					{areas.map(({ name }) => {
 						return (
-							<div key={name} className="font-bold text-xs">
+							<div key={name} className="rounded-md border bg-accent p-2 font-bold text-xs">
 								{name}
 							</div>
 						);
