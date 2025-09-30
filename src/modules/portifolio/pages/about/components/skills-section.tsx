@@ -27,7 +27,7 @@ export function SkillsSection() {
 					})}
 				</div>
 
-				<div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap">
+				<div className="grid min-h-[500px] grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap">
 					{filteredSkills.map(({ icon, name }) => {
 						return (
 							<Card key={name} className="w-full lg:size-[150px]">
