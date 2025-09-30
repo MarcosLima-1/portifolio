@@ -6,7 +6,7 @@ import { cn } from "@/utils/cn";
 
 type EventCardProps = {
 	event: TimelineEvent;
-	propsMap: EventPropsMap["achievement"]; // Tipo para as propriedades do evento
+	propsMap: EventPropsMap["achievement"];
 	eventDate: Dayjs;
 	isRecent: boolean;
 };

@@ -39,7 +39,6 @@ export function ThemeProvider({ children, defaultTheme = "light" }: ThemeProvide
 			saveThemeInStorage(theme.themeClass);
 		}
 
-		// Limpa todas as classes de tema antes de aplicar as novas
 		root.classList.remove(...themeKeys, "dark", "light");
 
 		root.classList.add(theme.themeClass, theme.scheme);

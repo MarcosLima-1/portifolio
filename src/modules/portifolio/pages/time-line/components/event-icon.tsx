@@ -1,4 +1,3 @@
-// event-icon.tsx
 import type { LucideIcon } from "lucide-react";
 import type { EventPropsMap } from "@/routes/_portifolio/time-line";
 import { cn } from "@/utils/cn";
