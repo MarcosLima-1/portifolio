@@ -13,6 +13,7 @@ import { Route as PortifolioRouteRouteImport } from "./routes/_portifolio/route"
 import { Route as PortifolioIndexRouteImport } from "./routes/_portifolio/index"
 import { Route as PortifolioTimeLineIndexRouteImport } from "./routes/_portifolio/time-line/index"
 import { Route as PortifolioProjectsIndexRouteImport } from "./routes/_portifolio/projects/index"
+import { Route as PortifolioLinksIndexRouteImport } from "./routes/_portifolio/links/index"
 import { Route as PortifolioContactIndexRouteImport } from "./routes/_portifolio/contact/index"
 
 const PortifolioRouteRoute = PortifolioRouteRouteImport.update({
@@ -34,6 +35,11 @@ const PortifolioProjectsIndexRoute = PortifolioProjectsIndexRouteImport.update({
   path: "/projects/",
   getParentRoute: () => PortifolioRouteRoute,
 } as any)
+const PortifolioLinksIndexRoute = PortifolioLinksIndexRouteImport.update({
+  id: "/links/",
+  path: "/links/",
+  getParentRoute: () => PortifolioRouteRoute,
+} as any)
 const PortifolioContactIndexRoute = PortifolioContactIndexRouteImport.update({
   id: "/contact/",
   path: "/contact/",
@@ -43,12 +49,14 @@ const PortifolioContactIndexRoute = PortifolioContactIndexRouteImport.update({
 export interface FileRoutesByFullPath {
   "/": typeof PortifolioIndexRoute
   "/contact": typeof PortifolioContactIndexRoute
+  "/links": typeof PortifolioLinksIndexRoute
   "/projects": typeof PortifolioProjectsIndexRoute
   "/time-line": typeof PortifolioTimeLineIndexRoute
 }
 export interface FileRoutesByTo {
   "/": typeof PortifolioIndexRoute
   "/contact": typeof PortifolioContactIndexRoute
+  "/links": typeof PortifolioLinksIndexRoute
   "/projects": typeof PortifolioProjectsIndexRoute
   "/time-line": typeof PortifolioTimeLineIndexRoute
 }
@@ -57,19 +65,21 @@ export interface FileRoutesById {
   "/_portifolio": typeof PortifolioRouteRouteWithChildren
   "/_portifolio/": typeof PortifolioIndexRoute
   "/_portifolio/contact/": typeof PortifolioContactIndexRoute
+  "/_portifolio/links/": typeof PortifolioLinksIndexRoute
   "/_portifolio/projects/": typeof PortifolioProjectsIndexRoute
   "/_portifolio/time-line/": typeof PortifolioTimeLineIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: "/" | "/contact" | "/projects" | "/time-line"
+  fullPaths: "/" | "/contact" | "/links" | "/projects" | "/time-line"
   fileRoutesByTo: FileRoutesByTo
-  to: "/" | "/contact" | "/projects" | "/time-line"
+  to: "/" | "/contact" | "/links" | "/projects" | "/time-line"
   id:
     | "__root__"
     | "/_portifolio"
     | "/_portifolio/"
     | "/_portifolio/contact/"
+    | "/_portifolio/links/"
     | "/_portifolio/projects/"
     | "/_portifolio/time-line/"
   fileRoutesById: FileRoutesById
@@ -108,6 +118,13 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof PortifolioProjectsIndexRouteImport
       parentRoute: typeof PortifolioRouteRoute
     }
+    "/_portifolio/links/": {
+      id: "/_portifolio/links/"
+      path: "/links"
+      fullPath: "/links"
+      preLoaderRoute: typeof PortifolioLinksIndexRouteImport
+      parentRoute: typeof PortifolioRouteRoute
+    }
     "/_portifolio/contact/": {
       id: "/_portifolio/contact/"
       path: "/contact"
@@ -121,6 +138,7 @@ declare module "@tanstack/react-router" {
 interface PortifolioRouteRouteChildren {
   PortifolioIndexRoute: typeof PortifolioIndexRoute
   PortifolioContactIndexRoute: typeof PortifolioContactIndexRoute
+  PortifolioLinksIndexRoute: typeof PortifolioLinksIndexRoute
   PortifolioProjectsIndexRoute: typeof PortifolioProjectsIndexRoute
   PortifolioTimeLineIndexRoute: typeof PortifolioTimeLineIndexRoute
 }
@@ -128,6 +146,7 @@ interface PortifolioRouteRouteChildren {
 const PortifolioRouteRouteChildren: PortifolioRouteRouteChildren = {
   PortifolioIndexRoute: PortifolioIndexRoute,
   PortifolioContactIndexRoute: PortifolioContactIndexRoute,
+  PortifolioLinksIndexRoute: PortifolioLinksIndexRoute,
   PortifolioProjectsIndexRoute: PortifolioProjectsIndexRoute,
   PortifolioTimeLineIndexRoute: PortifolioTimeLineIndexRoute,
 }

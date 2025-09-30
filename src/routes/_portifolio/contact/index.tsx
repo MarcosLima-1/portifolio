@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { contacts, socialMedias } from "@/core/contacts";
 import { TitlePage } from "@/modules/portifolio/components/title-page";
-import { ContactForm } from "@/modules/portifolio/pages/contact/components/contact-form";
 import { copyToClipboard } from "@/utils/copy-to-clipboard";
 
 export const Route = createFileRoute("/_portifolio/contact/")({
@@ -14,7 +13,7 @@ function RouteComponent() {
 	return (
 		<div className="space-y-14">
 			<TitlePage title="Contatos" />
-			<div className="flex w-full flex-row-reverse max-xl:flex-col">
+			<div className="flex min-h-[500px] w-full flex-row-reverse max-xl:flex-col">
 				<Card className="flex-1 border-0">
 					<h2 className="font-bold text-2xl">Contatos</h2>
 					<div className="space-y-4">
@@ -50,10 +49,10 @@ function RouteComponent() {
 						})}
 					</div>
 				</Card>
-				<Card className="flex-2 border-0">
+				{/* <Card className="flex-2 border-0">
 					<h2 className="font-bold text-2xl">Entre em contato</h2>
 					<ContactForm />
-				</Card>
+				</Card> */}
 			</div>
 		</div>
 	);
