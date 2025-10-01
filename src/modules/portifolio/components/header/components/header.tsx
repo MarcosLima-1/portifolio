@@ -11,7 +11,7 @@ interface HeaderProps {
 export function Header({ className }: HeaderProps) {
 	return (
 		<header className={cn("fixed top-0 right-0 z-50 p-2 max-lg:left-0 lg:p-4", className)}>
-			<div className={cn("scroll-hidden flex w-full items-center gap-2 rounded-md border bg-background p-2")}>
+			<div className={cn("scroll-hidden flex w-full items-center gap-2 rounded-md border bg-card p-2")}>
 				{headerLinks.map(({ href, label, icon: Icon }) => {
 					return (
 						<Button variant="ghost" key={label} asChild>
