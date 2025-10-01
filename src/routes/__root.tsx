@@ -6,15 +6,15 @@ import { checkEnv } from "@/lib/envs";
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
 	head: () => ({
 		meta: [
-			// Padrão (para o navegador)
-			{ title: "Marcos Markin | Desenvolvedor Full-stack & Web" },
+			// ? Padrão (para o navegador)
+			{ title: "Markin | Desenvolvedor Full-stack & Web" },
 			{
 				name: "description",
 				content: "Desenvolvedor de software focado em desenvolvimento web (React, APIs, DevOps). Conheça meu portfólio de projetos.",
 			},
 
-			// Open Graph (OG) - Para Facebook, LinkedIn, etc.
-			{ name: "og:title", content: "Marcos Markin | Portfólio de Desenvolvimento Web" },
+			// ? Open Graph (OG) - Para Facebook, LinkedIn, etc.
+			{ name: "og:title", content: "Markin | Portfólio de Desenvolvimento Web" },
 			{
 				name: "og:description",
 				content:
@@ -24,9 +24,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 			{ name: "og:image", content: "/opengraph.png" },
 			{ name: "og:type", content: "website" },
 
-			// Twitter Cards - Para X (antigo Twitter)
+			// ? Twitter Cards - Para X (antigo Twitter)
 			{ name: "twitter:card", content: "summary_large_image" },
-			{ name: "twitter:title", content: "Marcos Markin | Portfólio de Desenvolvimento Web" },
+			{ name: "twitter:title", content: "Markin | Portfólio de Desenvolvimento Web" },
 			{
 				name: "twitter:description",
 				content:
